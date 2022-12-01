@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "SOA.EventTicket.Service.Payment": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{B14F57
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "Messages\Messages.csproj", "{A81A2121-E4B9-4331-9A83-6474AD5B558A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOA.EventTicket.Service.Payment", "SOA.EventTicket.Service.Payment\SOA.EventTicket.Service.Payment.csproj", "{B7041DFB-457C-4903-9052-8E3A96346CEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A81A2121-E4B9-4331-9A83-6474AD5B558A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A81A2121-E4B9-4331-9A83-6474AD5B558A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A81A2121-E4B9-4331-9A83-6474AD5B558A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7041DFB-457C-4903-9052-8E3A96346CEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7041DFB-457C-4903-9052-8E3A96346CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7041DFB-457C-4903-9052-8E3A96346CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7041DFB-457C-4903-9052-8E3A96346CEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{4F05C70B-3566-4FF4-A540-E7EA7895C862} = {963204D3-22C5-4F47-A545-3342A190BC5F}
 		{856D9761-0382-4A90-A838-CC8834ABEC89} = {963204D3-22C5-4F47-A545-3342A190BC5F}
 		{A81A2121-E4B9-4331-9A83-6474AD5B558A} = {B14F57FC-9E90-408C-9698-EB79421CFD81}
+		{B7041DFB-457C-4903-9052-8E3A96346CEB} = {963204D3-22C5-4F47-A545-3342A190BC5F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E6CD3A53-74CF-41DF-AFF0-2DC70DF27E88}
