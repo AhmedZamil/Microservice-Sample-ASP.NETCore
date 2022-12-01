@@ -1,9 +1,15 @@
+using Messages;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.Azure.Storage;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Rebus.Config;
+using Rebus.Routing.TypeBased;
+using Rebus.ServiceProvider;
+using SOA.EventTicket.Grpc;
 using SOA.EventTicket.Models;
 using SOA.EventTicket.Services;
 using System;
@@ -34,7 +40,21 @@ namespace SOA.EventTicket
             c.BaseAddress = new Uri(Configuration["ApiConfigs:EventCatalog:Uri"]));
             services.AddHttpClient<IShoppingBasketService, ShoppingBasketService>(c=>
             c.BaseAddress = new Uri(Configuration["ApiConfigs:ShoppingBasket:Uri"]));
+
+
+
+            services.AddGrpcClient<Events.EventsClient>(
+                o => o.Address = new Uri(Configuration["ApiConfigs:EventCatalog:Uri"]));
+
             services.AddSingleton<Settings>();
+
+            var storageAccount = CloudStorageAccount.Parse(Configuration["AzureQueues:ConnectionString"]);
+
+            services.AddRebus(c => c
+                .Transport(t => t.UseAzureStorageQueuesAsOneWayClient(storageAccount.ToString()))
+                .Routing(r => r.TypeBased().Map<PaymentRequestMessage>(
+                    Configuration["AzureQueues:QueueName"]))
+            );
 
         }
 

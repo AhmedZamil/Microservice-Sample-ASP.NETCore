@@ -4,4 +4,23 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Protos\eventcatalog.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.40.0" />
+    <PackageReference Include="Microsoft.Azure.Storage.Common" Version="11.2.3" />
+    <PackageReference Include="Rebus.AzureQueues" Version="3.0.0" />
+    <PackageReference Include="Rebus.ServiceProvider" Version="5.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Messages\Messages.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\eventcatalog.proto" GrpcServices="Client" />
+  </ItemGroup>
+
 </Project>

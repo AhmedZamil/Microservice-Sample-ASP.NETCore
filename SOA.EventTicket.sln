@@ -3,11 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOA.EventTicket", "SOA.EventTicket\SOA.EventTicket.csproj", "{3B9D2FC4-6680-4D6C-9DCD-13E6E25A4AB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOA.EventTicket", "SOA.EventTicket\SOA.EventTicket.csproj", "{3B9D2FC4-6680-4D6C-9DCD-13E6E25A4AB7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicroServices", "MicroServices", "{963204D3-22C5-4F47-A545-3342A190BC5F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{CC08404D-B855-46E1-859C-A0613FE3839C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOA.EventTicket.Service.EventCatalog", "SOA.EventTicket.Service.EventCatalog\SOA.EventTicket.Service.EventCatalog.csproj", "{4F05C70B-3566-4FF4-A540-E7EA7895C862}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOA.EventTicket.Service.ShoppingBasket", "SOA.EventTicket.Service.ShoppingBasket\SOA.EventTicket.Service.ShoppingBasket.csproj", "{856D9761-0382-4A90-A838-CC8834ABEC89}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{B14F57FC-9E90-408C-9698-EB79421CFD81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "Messages\Messages.csproj", "{A81A2121-E4B9-4331-9A83-6474AD5B558A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,12 +27,27 @@ Global
 		{3B9D2FC4-6680-4D6C-9DCD-13E6E25A4AB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B9D2FC4-6680-4D6C-9DCD-13E6E25A4AB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B9D2FC4-6680-4D6C-9DCD-13E6E25A4AB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F05C70B-3566-4FF4-A540-E7EA7895C862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F05C70B-3566-4FF4-A540-E7EA7895C862}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F05C70B-3566-4FF4-A540-E7EA7895C862}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F05C70B-3566-4FF4-A540-E7EA7895C862}.Release|Any CPU.Build.0 = Release|Any CPU
+		{856D9761-0382-4A90-A838-CC8834ABEC89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{856D9761-0382-4A90-A838-CC8834ABEC89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{856D9761-0382-4A90-A838-CC8834ABEC89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{856D9761-0382-4A90-A838-CC8834ABEC89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A81A2121-E4B9-4331-9A83-6474AD5B558A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A81A2121-E4B9-4331-9A83-6474AD5B558A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A81A2121-E4B9-4331-9A83-6474AD5B558A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A81A2121-E4B9-4331-9A83-6474AD5B558A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3B9D2FC4-6680-4D6C-9DCD-13E6E25A4AB7} = {CC08404D-B855-46E1-859C-A0613FE3839C}
+		{4F05C70B-3566-4FF4-A540-E7EA7895C862} = {963204D3-22C5-4F47-A545-3342A190BC5F}
+		{856D9761-0382-4A90-A838-CC8834ABEC89} = {963204D3-22C5-4F47-A545-3342A190BC5F}
+		{A81A2121-E4B9-4331-9A83-6474AD5B558A} = {B14F57FC-9E90-408C-9698-EB79421CFD81}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E6CD3A53-74CF-41DF-AFF0-2DC70DF27E88}

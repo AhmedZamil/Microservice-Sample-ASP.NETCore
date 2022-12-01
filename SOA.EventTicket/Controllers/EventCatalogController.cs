@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SOA.EventTicket.Extensions;
+using SOA.EventTicket.Grpc;
 using SOA.EventTicket.Models;
 using SOA.EventTicket.Models.API;
 using SOA.EventTicket.Models.View;
@@ -14,12 +15,16 @@ namespace SOA.EventTicket.Controllers
     public class EventCatalogController : Controller
     {
         private readonly IEventCatalogService eventCatalogService;
+        private readonly Events.EventsClient _eventCataloggRPCService;
         private readonly IShoppingBasketService shoppingBasketService;
         private readonly Settings settings;
 
-        public EventCatalogController(IEventCatalogService eventCatalogService,IShoppingBasketService shoppingBasketService ,Settings settings)
+        public EventCatalogController(IEventCatalogService eventCatalogService,
+            IShoppingBasketService shoppingBasketService,Events.EventsClient eventCataloggRPCService,
+            Settings settings)
         {
             this.eventCatalogService = eventCatalogService;
+            _eventCataloggRPCService = eventCataloggRPCService;
             this.shoppingBasketService = shoppingBasketService;
             this.settings = settings;
         }
@@ -43,6 +48,18 @@ namespace SOA.EventTicket.Controllers
                 NumberOfItems = numOfItems,
                 SelectedCategory = categoryid     
             });
+        }
+
+        [HttpPost]
+        public IActionResult SelectCategory([FromForm] Guid selectedCategory)
+        {
+            return RedirectToAction("Index", new { categoryId = selectedCategory });
+        }
+
+        public async Task<IActionResult> Detail(Guid eventId)
+        {
+            var ev = await eventCatalogService.GetEvent(eventId);
+            return View(ev);
         }
     }
 }
