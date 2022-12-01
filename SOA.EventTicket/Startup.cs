@@ -36,10 +36,10 @@ namespace SOA.EventTicket
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddHttpClient<IEventCatalogService, EventCatalogService>(c => 
-            c.BaseAddress = new Uri(Configuration["ApiConfigs:EventCatalog:Uri"]));
-            services.AddHttpClient<IShoppingBasketService, ShoppingBasketService>(c=>
-            c.BaseAddress = new Uri(Configuration["ApiConfigs:ShoppingBasket:Uri"]));
+            //services.AddHttpClient<IEventCatalogService, EventCatalogService>(c => 
+            //c.BaseAddress = new Uri(Configuration["ApiConfigs:EventCatalog:Uri"]));
+            //services.AddHttpClient<IShoppingBasketService, ShoppingBasketService>(c=>
+            //c.BaseAddress = new Uri(Configuration["ApiConfigs:ShoppingBasket:Uri"]));
 
 
 

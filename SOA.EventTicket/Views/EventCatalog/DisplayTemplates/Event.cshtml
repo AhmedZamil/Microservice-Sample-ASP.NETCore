@@ -1,10 +1,10 @@
-﻿@model SOA.EventTicket.Models.API.Event
+﻿@model SOA.EventTicket.Grpc.Event
 <tr>
     <td>
         <img class="artistPic" src="@Model.ImageUrl" alt="Artist pic" />
     </td>
     <td>
-        @Model.Date.ToShortDateString()
+        @Model.Date.ToDateTime().ToShortDateString()
     </td>
     <td>
         @Model.Name

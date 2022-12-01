@@ -14,7 +14,7 @@ namespace SOA.EventTicket.Services.EventCatalog.Services
         private readonly ICategoryRepository _categoryRepository;
         private readonly IMapper _mapper;
 
-        public EventGrpcService(IEventRepository eventRepository, 
+        public EventGrpcService(IEventRepository eventRepository,
             ICategoryRepository categoryRepository, IMapper mapper)
         {
             _eventRepository = eventRepository;
@@ -50,7 +50,7 @@ namespace SOA.EventTicket.Services.EventCatalog.Services
             return response;
         }
 
-        public override async Task<GetAllCategoriesResponse> GetAllCategories(GetAllCategoriesRequest request, 
+        public override async Task<GetAllCategoriesResponse> GetAllCategories(GetAllCategoriesRequest request,
             ServerCallContext context)
         {
             var response = new GetAllCategoriesResponse();
